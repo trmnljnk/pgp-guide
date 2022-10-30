@@ -61,6 +61,50 @@ gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: DF9B 9C49 EAA9 2984 3258  9D76 DA87 E80D 6294 BE9B
 ----
 
+Controleer of de SHA512 hash overeenkomt met de hash in gesigneerde bestand.
+
+[,console]
+----
+$ grep $(sha512sum debian-live-*-amd64-xfce.iso) SHA512SUMS
+SHA512SUMS:799ec1fdb098caa7b60b71ed1fdb1f6390a1c6717b4314265e7042fa271c84f67fff0d0380297f60c4bcd0c1001e08623ab3d2a2ad64079d83d1795c40eb7a0a  debian-live-10.5.0-amd64-xfce.iso
+----
+
+Pak een USB stick en kopieer het gedownloade iso-bestand erop.
+
+[,console]
+----
+$ sudo dmesg | tail
+usb-storage 3-2:1.0: USB Mass Storage device detected
+scsi host2: usb-storage 3-2:1.0
+scsi 2:0:0:0: Direct-Access     TS-RDF5  SD  Transcend    TS3A PQ: 0 ANSI: 6
+sd 2:0:0:0: Attached scsi generic sg1 type 0
+sd 2:0:0:0: [sdb] 31116288 512-byte logical blocks: (15.9 GB/14.8 GiB)
+sd 2:0:0:0: [sdb] Write Protect is off
+sd 2:0:0:0: [sdb] Mode Sense: 23 00 00 00
+sd 2:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+sdb: sdb1 sdb2
+sd 2:0:0:0: [sdb] Attached SCSI removable disk
+
+$ sudo dd if=debian-live-10.4.0-amd64-xfce.iso of=/dev/sdb bs=4M; sync
+465+1 records in
+465+1 records out
+1951432704 bytes (2.0 GB, 1.8 GiB) copied, 42.8543 s, 45.5 MB/s
+----
+
+Sluit de computer af en start hem opnieuw op met de live versie van Debian.
+
+## Benodigde software
+
+
+
+
+
+
+
+
+
+
+
 
 
 

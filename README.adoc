@@ -213,6 +213,25 @@ use-agent
 throw-keyids
 ----
 
+Sluit alle netwerkverbindingen af tijdens het maken van de sleutels. 
+
+# Master Sleutel
+
+De eerste sleutel die moet worden gegenereerd, is de hoofdsleutel. 
+Het wordt alleen gebruikt voor certificering: om subsleutels uit te geven die worden gebruikt voor codering, ondertekening en authenticatie.
+
+Belangrijk De hoofdsleutel moet te allen tijde offline blijven en alleen toegankelijk zijn om subsleutels in te trekken of uit te geven.
+Sleutels kunnen ook op de YubiKey zelf worden gegenereerd om ervoor te zorgen dat er geen andere kopieën bestaan.
+
+U wordt gevraagd een wachtwoordzin in te voeren en te verifiëren. Houd deze bij de hand, want u hebt deze later meerdere keren nodig.
+
+Genereer een sterke wachtwoordzin die op een veilige plaats kan worden opgeschreven of onthouden:
+
+
+
+
+
+
 [,console]
 ----
 

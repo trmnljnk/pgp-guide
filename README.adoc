@@ -1,0 +1,4 @@
+Dit is een handleiding voor het gebruik van GPG encryptie.
+GPG encryptie kan worden gebruikt voor het versleutelen, signeren en authenticatie.
+Gebruikelijk is om dergelijke sleutels op te slaan op de harddisk van een computer.
+In deze handleiding keizen wij ervoor om de prive sleutel op te slaan op een fysieke sleutel.

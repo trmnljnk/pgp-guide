@@ -323,13 +323,28 @@ pub   rsa4096/0x9B0D301A133E5D74 2022-10-28 [C]
 uid                              Peter Vissers <pjlvissers@gmail.com>
 ----
 
-[,console]
-----
-
-----
+Exporteer de sleutel als variabele voor later gebruik.
 
 [,console]
 ----
+$ export KEYID=0x9B0D301A133E5D74
+----
+
+# Sub-sleutels
+
+
+[,console]
+----
+$ gpg --expert --edit-key $KEYID
+Secret key is available.
+
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+sec  rsa4096/0x9B0D301A133E5D74
+     created: 2022-10-28  expires: never       usage: C   
+     trust: ultimate      validity: ultimate
+[ultimate] (1). Terminal Junkie <tj@gmail.com>
 
 ----
 

@@ -218,33 +218,109 @@ Sluit alle netwerkverbindingen af tijdens het maken van de sleutels.
 # Master Sleutel
 
 De eerste sleutel die moet worden gegenereerd, is de hoofdsleutel. 
-Het wordt alleen gebruikt voor certificering: om subsleutels uit te geven die worden gebruikt voor codering, ondertekening en authenticatie.
+Deze wordt alleen gebruikt voor certificering: om subsleutels uit te geven die worden gebruikt voor codering, ondertekening en authenticatie.
 
-Belangrijk De hoofdsleutel moet te allen tijde offline blijven en alleen toegankelijk zijn om subsleutels in te trekken of uit te geven.
+De hoofdsleutel moet te allen tijde offline blijven en alleen toegankelijk zijn om subsleutels in te trekken of uit te geven.
 Sleutels kunnen ook op de YubiKey zelf worden gegenereerd om ervoor te zorgen dat er geen andere kopieën bestaan.
 
 U wordt gevraagd een wachtwoordzin in te voeren en te verifiëren. Houd deze bij de hand, want u hebt deze later meerdere keren nodig.
 
-Genereer een sterke wachtwoordzin die op een veilige plaats kan worden opgeschreven of onthouden:
-
-
-
-
-
+Genereer een sterke wachtwoordzin die op een veilige plaats kan worden bewaard of onthouden:
 
 [,console]
 ----
-
+$ gpg --gen-random --armor 0 24
+2IUW55aTFzvSOmg7/Z4Uz+GWAmes0xTm
 ----
+
+De master sleutel krijg geen expiratie datum
 
 [,console]
 ----
+tj@pcengine:~$ gpg --expert --full-generate-key
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+   (9) ECC and ECC
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (13) Existing key
+  (14) Existing key from card
+Your selection? 8
 
+Possible actions for a RSA key: Sign Certify Encrypt Authenticate 
+Current allowed actions: Sign Certify Encrypt 
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? E
+
+Possible actions for a RSA key: Sign Certify Encrypt Authenticate 
+Current allowed actions: Sign Certify 
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? S
+
+Possible actions for a RSA key: Sign Certify Encrypt Authenticate 
+Current allowed actions: Certify 
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? Q
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
 ----
+
+Voer je naam en e-mailadres in:
 
 [,console]
 ----
+GnuPG needs to construct a user ID to identify your key.
 
+Real name: Peter Vissers
+Email address: pjlvissers@gmail.com
+Comment: 
+You selected this USER-ID:
+    "Peter Vissers <pjlvissers@gmail.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /tmp/gnupg_202210290110_LWZ/trustdb.gpg: trustdb created
+gpg: key 0x9B0D301A133E5D74 marked as ultimately trusted
+gpg: directory '/tmp/gnupg_202210290110_LWZ/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/tmp/gnupg_202210290110_LWZ/openpgp-revocs.d/3E8B1C7D728F074719DB29009B0D301A133E5D74.rev'
+public and secret key created and signed.
+
+pub   rsa4096/0x9B0D301A133E5D74 2022-10-28 [C]
+      Key fingerprint = 3E8B 1C7D 728F 0747 19DB  2900 9B0D 301A 133E 5D74
+uid                              Peter Vissers <pjlvissers@gmail.com>
 ----
 
 [,console]

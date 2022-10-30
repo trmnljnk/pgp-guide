@@ -539,15 +539,32 @@ ssb  rsa4096/0xF4CF19EABAF2DE1F
 [ultimate] (1). Terminal Junkie <tj@gmail.com
 ----
 
+Rond af door de sleutels op te slaan.
 
 [,console]
 ----
-
+gpg> save
 ----
+
+# Controleer
+
+Maak een lijst van de gegenereerde geheime sleutels en verifieer de uitvoer:
+
 [,console]
 ----
-
+$ gpg --list-key
+/tmp/gnupg_202210290110_LWZ/pubring.kbx
+---------------------------------------
+pub   rsa4096/0x9B0D301A133E5D74 2022-10-28 [C]
+      Key fingerprint = 3E8B 1C7D 728F 0747 19DB  2900 9B0D 301A 133E 5D74
+uid                   [ultimate] Terminal Junkie <tj@gmail.com
+sub   rsa4096/0xF427854791E4A265 2022-10-28 [S] [expires: 2023-10-28]
+sub   rsa4096/0xF18B6DB6309FE98D 2022-10-28 [E] [expires: 2023-10-28]
+sub   rsa4096/0xF4CF19EABAF2DE1F 2022-10-28 [A] [expires: 2023-10-28]
 ----
+
+Verifieer met een OpenPGP key best practice checker:
+
 [,console]
 ----
 

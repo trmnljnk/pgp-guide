@@ -169,7 +169,11 @@ $ sudo service rng-tools restart
 link:https://onerng.info/onerng/[OneRNG]
 
 ----
-The linux kernel has changed the way that it supports RNG devices - it no longer correctly supports the entropy driven API for providing data to the kernel entropy pool - we have changed the OneRNG daemon script to periodicaly feed the kernel with new entropy, you can change this rate by editing the OneRNG config file /etc/onerng.conf, then removing the OneRNG and plugging it back in again
+The linux kernel has changed the way that it supports RNG devices - 
+it no longer correctly supports the entropy driven API for providing data to the kernel entropy pool - 
+we have changed the OneRNG daemon script to periodicaly feed the kernel with new entropy, 
+you can change this rate by editing the OneRNG config file /etc/onerng.conf, 
+then removing the OneRNG and plugging it back in again
 
 Starting with version 3.7 you can verify that your OneRNG is working correctly by noting that the orange LED blinks every second or so.
 

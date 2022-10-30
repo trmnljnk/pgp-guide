@@ -24,3 +24,5 @@ Hieronder een rangschikking van omgevingen van minst veilig naar meest veilig.
 
 Afhankelijk van iemands dreigingsvctor (threat vector) is het bllanrijk te weten dat 
 
+Voor deze handleiding is gebruik gemaakt van een pcengine apu die niet verbonden is met een netwerk.
+

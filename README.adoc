@@ -237,7 +237,7 @@ De master sleutel krijg geen expiratie datum
 
 [,console]
 ----
-tj@pcengine:~$ gpg --expert --full-generate-key
+$ gpg --expert --full-generate-key
 Please select what kind of key you want:
    (1) RSA and RSA (default)
    (2) DSA and Elgamal
@@ -302,10 +302,10 @@ Voer je naam en e-mailadres in:
 GnuPG needs to construct a user ID to identify your key.
 
 Real name: Peter Vissers
-Email address: pjlvissers@gmail.com
+Email address: tj@gmail.com
 Comment: 
 You selected this USER-ID:
-    "Peter Vissers <pjlvissers@gmail.com>"
+    "Terminal Junkie <tj@gmail.com>"
 
 Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
 We need to generate a lot of random bytes. It is a good idea to perform
@@ -320,7 +320,7 @@ public and secret key created and signed.
 
 pub   rsa4096/0x9B0D301A133E5D74 2022-10-28 [C]
       Key fingerprint = 3E8B 1C7D 728F 0747 19DB  2900 9B0D 301A 133E 5D74
-uid                              Peter Vissers <pjlvissers@gmail.com>
+uid                              Terminal Junkie <tj@gmail.com>
 ----
 
 Exporteer de sleutel als variabele voor later gebruik.

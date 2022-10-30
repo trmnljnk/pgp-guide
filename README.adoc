@@ -628,7 +628,7 @@ Het revoke.asc-certificaatbestand moet worden opgeslagen (of afgedrukt) op een (
 
 Zodra sleutels naar YubiKey zijn verplaatst, kunnen ze niet meer worden verplaatst! Maak een versleutelde back-up van de sleutelhanger op verwisselbare media, zodat u deze offline op een veilige plaats kunt bewaren.
 
-Tip Het ext2 bestandssysteem (zonder encryptie) kan zowel op Linux als OpenBSD worden gemount. Overweeg in plaats daarvan een FAT32/NTFS-bestandssysteem te gebruiken voor MacOS/Windows-compatibiliteit.
+Het ext2 bestandssysteem (zonder encryptie) kan zowel op Linux als OpenBSD worden gemount. Overweeg in plaats daarvan een FAT32/NTFS-bestandssysteem te gebruiken voor MacOS/Windows-compatibiliteit.
 
 Overweeg als extra back-upmaatregel een papieren kopie van de sleutels te gebruiken. De Linux Kernel Maintainer PGP Guide wijst erop dat dergelijke afdrukken nog steeds met een wachtwoord zijn beveiligd. Het raadt aan om het wachtwoord op het papier te schrijven, aangezien het onwaarschijnlijk is dat u het originele sleutelwachtwoord herinnert dat werd gebruikt toen de papieren back-up werd gemaakt. Het is duidelijk dat je een goede plek nodig hebt om zo'n afdruk te bewaren.
 

@@ -6,4 +6,21 @@ In deze handleiding keizen wij ervoor om de prive sleutel op te slaan op een fys
 Sleutels opgelagen op een Yubikey kunnen niet geexfilteerd worden in tegenstelling tot sleutels die worden op geslagen op een harddisk.
 Verder heeft een fysieke sleutel als voordeel dat hij op meerderde computers gebruikt kan worden, hetgeen het dagelijks gebruik vereenvoudigd.
 Een hardware sleutelkan ook gebruikt worden om in te loggen op servers middels SSH/GPG, in plaats van een lang wachtwoord kan de sleutel ontgrendeld worden met een pincode. 
-Alle cryptografische handelingen worden op de sleutel uitgevoerd, in plaats van in geheugen van de computer.
+Alle cryptografische handelingen worden op de sleutel uitgevoerd, in plaats van in geheugen van een computer.
+
+# Voorbereiding
+
+Er zijn verschillende veel manieren om sleutels te genereren. Belanrijk is om er zeker van te zijn dat een derde niet bij de sleutels kan komen.
+UIteindelijk is het dreigingsniveau dat iemand heeft bepalend voor welke installatie wijze als veilig wordt verondersteld.
+Hieronder een rangschikking van omgevingen van minst veilig naar meest veilig.
+
+1. de dagelijks ingebruik zijnde computer
+2. een virtuele machine op de dagelijk in gebruik zijnde computer
+3. een geharde Linux of BSD installatie
+4. Live images zoals Debian Live of Tails
+5. Computer zonder Intel ME
+6. Een computer die niet is aangesloten op een netwek (air-gapped)
+
+
+Afhankelijk van iemands dreigingsvctor (threat vector) is het bllanrijk te weten dat 
+

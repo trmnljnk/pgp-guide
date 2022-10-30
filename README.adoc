@@ -567,12 +567,27 @@ Verifieer met een OpenPGP key best practice checker:
 
 [,console]
 ----
-
+$ gpg --export $KEYID | hokey lint
 ----
+
+## Geheime sleutels exporteren
+
+
 [,console]
 ----
+$ gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/mastersub.key
 
+$ gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
 ----
+
+# Intrekkingscertificaat
+
+Hoewel we een back-up maken van de hoofdsleutel en deze op een veilige plaats bewaren, is het het beste om nooit uit te sluiten dat deze verloren gaat of dat de back-up mislukt. Zonder de hoofdsleutel is het onmogelijk om subsleutels te vernieuwen of te roteren of een intrekkingscertificaat te genereren, de PGP-identiteit is nutteloos.
+
+Erger nog, we kunnen dit feit op geen enkele manier bekendmaken aan degenen die onze sleutels gebruiken. Het is redelijk om aan te nemen dat dit op een gegeven moment zal gebeuren en de enige overgebleven manier om verweesde sleutels te depreciëren is een intrekkingscertificaat.
+
+Het intrekkingscertificaat maken:
+
 [,console]
 ----
 

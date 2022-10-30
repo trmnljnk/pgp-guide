@@ -105,19 +105,45 @@ $ sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd 
 
 [,console]
 ----
+$ sudo apt -y install python3-pip python3-pyscard
 
+$ pip3 install PyOpenSSL
+
+$ pip3 install yubikey-manager
+
+$ sudo service pcscd start
+
+$ ~/.local/bin/ykman openpgp info
 ----
 
 
+# Entropy
 
+Voor het genereren van cryptographische sleutels is veel randomness nodig.
 
-
-
+Op Linux systemen kan dat op de volgende manier worden gecontroleerd.
 
 [,console]
 ----
-
+$ cat /proc/sys/kernel/random/entropy_avail
+265
 ----
+
+De meeste besturingssystemen gebruiken op software gebaseerde generatoren voor pseudowillekeurige getallen. 
+Op nieuwere machines zijn er op CPU gebaseerde hardware random number generators (HRNG) of u kunt een apart
+hardwareapparaat gebruiken zoals de White Noise of link:https://onerng.info/onerng/[OneRNG] om de snelheid
+van het genereren van entropie en mogelijk de kwaliteit te verhogen.
+
+
+
+
+
+
+
+
+
+
+
 
 [,console]
 ----

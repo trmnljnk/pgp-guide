@@ -24,5 +24,13 @@ Hieronder een rangschikking van omgevingen van minst veilig naar meest veilig.
 
 Afhankelijk van iemands dreigingsvctor (threat vector) is het bllanrijk te weten dat 
 
-Voor deze handleiding is gebruik gemaakt van een pcengine apu die niet verbonden is met een netwerk.
+Voor deze handleiding is gebruik gemaakt van een PC Engines APU die niet verbonden is met een netwerk.
 
+[,console]
+----
+$ curl -LfO https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/SHA512SUMS
+
+$ curl -LfO https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/SHA512SUMS.sign
+
+$ curl -LfO https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/$(awk '/xfce.iso/ {print $2}' SHA512SUMS)
+----

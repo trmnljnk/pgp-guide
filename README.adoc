@@ -590,8 +590,14 @@ Het intrekkingscertificaat maken:
 
 [,console]
 ----
-
+$ gpg --output $GNUPGHOME/revoke.asc --gen-revoke $KEYID
 ----
+
+Het revoke.asc-certificaatbestand moet worden opgeslagen (of afgedrukt) op een (secundaire) plaats waar het kan worden opgehaald in het geval dat de hoofdback-up mislukt.
+
+
+
+
 [,console]
 ----
 

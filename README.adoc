@@ -97,12 +97,9 @@ Sluit de computer af en start hem opnieuw op met de live versie van Debian.
 
 [,console]
 ----
-$ sudo apt update
-
-$ sudo apt -y upgrade
+$ sudo apt update && sudo apt -y upgrade
 
 $ sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization
-
 ----
 
 
@@ -110,6 +107,89 @@ $ sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd 
 ----
 
 ----
+
+
+
+
+
+
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+[,console]
+----
+
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

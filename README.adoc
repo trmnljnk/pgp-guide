@@ -446,9 +446,128 @@ ssb  rsa4096/0xF18B6DB6309FE98D
 [ultimate] (1). Terminal Junkie <tj@gmail.com>
 ----
 
+## Authentiecatie
+
+Maak tot slot een authenticatiesleutel.
+
+GPG biedt geen sleuteltype voor alleen authenticatie, dus selecteer (8) RSA (stel uw eigen mogelijkheden in) 
+en schakel de vereiste mogelijkheden in totdat de enige toegestane actie Authenticatie is:
+
+[,console]
+----
+gpg> addkey
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (12) ECC (encrypt only)
+  (13) Existing key
+  (14) Existing key from card
+Your selection? 8
+
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: Sign Encrypt 
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? S
+
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: Encrypt 
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? E
+
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: 
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? A
+
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: Authenticate 
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? Q
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Sun 29 Oct 2023 01:27:45 AM CEST
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+sec  rsa4096/0x9B0D301A133E5D74
+     created: 2022-10-28  expires: never       usage: C   
+     trust: ultimate      validity: ultimate
+ssb  rsa4096/0xF427854791E4A265
+     created: 2022-10-28  expires: 2023-10-28  usage: S   
+ssb  rsa4096/0xF18B6DB6309FE98D
+     created: 2022-10-28  expires: 2023-10-28  usage: E   
+ssb  rsa4096/0xF4CF19EABAF2DE1F
+     created: 2022-10-28  expires: 2023-10-28  usage: A   
+[ultimate] (1). Terminal Junkie <tj@gmail.com
+----
 
 
+[,console]
+----
 
+----
+[,console]
+----
+
+----
+[,console]
+----
+
+----
+[,console]
+----
+
+----
+[,console]
+----
+
+----
+[,console]
+----
+
+----
+[,console]
+----
+
+----
 
 
 

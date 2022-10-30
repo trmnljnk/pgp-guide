@@ -593,8 +593,38 @@ Het intrekkingscertificaat maken:
 $ gpg --output $GNUPGHOME/revoke.asc --gen-revoke $KEYID
 ----
 
+[,console]
+----
+sec  rsa4096/0x9B0D301A133E5D74 2022-10-28 Terminal Junkie <tj@gmail.com
+
+Create a revocation certificate for this key? (y/N) y
+Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+(Probably you want to select 1 here)
+Your decision? 1
+Enter an optional description; end it with an empty line:
+> 
+Reason for revocation: Key has been compromised
+(No description given)
+Is this okay? (y/N) y
+ASCII armored output forced.
+Revocation certificate created.
+
+Please move it to a medium which you can hide away; if Mallory gets
+access to this certificate he can use it to make your key unusable.
+It is smart to print this certificate and store it away, just in case
+your media become unreadable.  But have some caution:  The print system of
+your machine might store the data and make it available to others!
+----
+
+
 Het revoke.asc-certificaatbestand moet worden opgeslagen (of afgedrukt) op een (secundaire) plaats waar het kan worden opgehaald in het geval dat de hoofdback-up mislukt.
 
+## Backup
 
 
 

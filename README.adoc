@@ -134,31 +134,53 @@ Op nieuwere machines zijn er op CPU gebaseerde hardware random number generators
 hardwareapparaat gebruiken zoals de White Noise of link:https://onerng.info/onerng/[OneRNG] om de snelheid
 van het genereren van entropie en mogelijk de kwaliteit te verhogen.
 
+# OneRNG
 
-
-
-
-
-
-
-
-
-
+Installeer rng-tools software:
 
 [,console]
 ----
-
+$ sudo apt -y install at rng-tools python3-gnupg openssl
 ----
 
-[,console]
-----
-
-----
+Voorbeeld OneNRG
 
 [,console]
 ----
+$ wget https://github.com/OneRNG/onerng.github.io/raw/master/sw/onerng_3.7-1_all.deb
+
+$ sha256sum onerng_3.7-1_all.deb
+b7cda2fe07dce219a95dfeabeb5ee0f662f64ba1474f6b9dddacc3e8734d8f57  onerng_3.7-1_all.deb
+
+$ sudo dpkg -i onerng_3.7-1_all.deb
+
+$ echo "HRNGDEVICE=/dev/ttyACM0" | sudo tee /etc/default/rng-tools
+----
+
+Plug het apperaat in en restart rng-tools:
+
+[,console]
+----
+$ sudo atd
+
+$ sudo service rng-tools restart
+----
+
+link:https://onerng.info/onerng/[OneRNG]
 
 ----
+The linux kernel has changed the way that it supports RNG devices - it no longer correctly supports the entropy driven API for providing data to the kernel entropy pool - we have changed the OneRNG daemon script to periodicaly feed the kernel with new entropy, you can change this rate by editing the OneRNG config file /etc/onerng.conf, then removing the OneRNG and plugging it back in again
+
+Starting with version 3.7 you can verify that your OneRNG is working correctly by noting that the orange LED blinks every second or so.
+
+----
+
+
+
+
+
+
+
 
 [,console]
 ----

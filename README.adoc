@@ -93,7 +93,23 @@ $ sudo dd if=debian-live-10.4.0-amd64-xfce.iso of=/dev/sdb bs=4M; sync
 
 Sluit de computer af en start hem opnieuw op met de live versie van Debian.
 
-## Benodigde software
+# Benodigde software
+
+[,console]
+----
+$ sudo apt update
+
+$ sudo apt -y upgrade
+
+$ sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization
+
+----
+
+
+[,console]
+----
+
+----
 
 
 
